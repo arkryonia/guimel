@@ -12,5 +12,13 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "Post": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "mongoDB",
+    "public": true
   }
 }
