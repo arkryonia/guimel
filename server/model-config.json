@@ -13,6 +13,28 @@
       "./mixins"
     ]
   },
+  "User": {
+    "dataSource": "mongoDB"
+  },
+  "AccessToken": {
+    "dataSource": "mongoDB",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongoDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongoDB",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongoDB",
+    "public": false
+  },
   "Post": {
     "dataSource": "mongoDB",
     "public": true
