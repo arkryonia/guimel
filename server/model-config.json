@@ -50,5 +50,9 @@
   "realization": {
     "dataSource": "mongoDB",
     "public": true
+  },
+  "Account": {
+    "dataSource": "mongoDB",
+    "public": true
   }
 }
