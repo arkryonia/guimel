@@ -42,5 +42,13 @@
   "Category": {
     "dataSource": "mongoDB",
     "public": true
+  },
+  "Project": {
+    "dataSource": "mongoDB",
+    "public": true
+  },
+  "realization": {
+    "dataSource": "mongoDB",
+    "public": true
   }
 }

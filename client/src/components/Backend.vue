@@ -11,6 +11,10 @@
               <li><router-link :to="{name:'CategoryBackend' }" > All Categories </router-link></li>
               <li><router-link :to="{name:'PostAdd' }" > Add Post </router-link></li>
               <li><router-link :to="{name:'PostBackend' }" > All Posts </router-link></li>
+              <li><router-link :to="{name:'ProjectAdd' }" > Add Projects </router-link></li>
+              <li><router-link :to="{name:'ProjectBackend' }" > All Projects </router-link></li>
+              <li><router-link :to="{name:'RealizationAdd' }" > Add Realisations </router-link></li>
+              <li><router-link :to="{name:'RealizationBackend' }" > All Realisations </router-link></li>
               <button v-show="isLoggedIn()" @click="Logout"> Logout </button>
             </ul>
           </div>
