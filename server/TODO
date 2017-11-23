@@ -1,0 +1,15 @@
+Todos:
+  ☐ admin
+    ☐ Has magic power
+  ☐ director
+    ☐ Can Add/Update Supervisor
+    ☐ Can Add/Update Consultant
+    ☐ Can Add/Update Category
+  ☐ supervisor
+    ☐ Can submit post
+    ☐ Can validate post
+  ☐ consultant
+    ☐ Can submit post
+
+  
+  
