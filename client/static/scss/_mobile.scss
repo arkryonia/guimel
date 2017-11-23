@@ -1,0 +1,97 @@
+@media screen and ( max-width : 767px ){
+    *.mobile{
+        display: inline-block;
+    }
+
+    *.desktop{
+        display: none;
+    }
+
+    *.tablet{
+        display: none;
+    }
+}
+
+
+@media screen and ( max-width : 350px ){
+    header{
+        .mobileHeader{
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background-color: darken($color, 2);
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            padding: 0 10px;
+
+            .nav{
+                margin-right: 15px;
+                width: 10%;
+               
+                div.links{
+                    width: 70vw!important;
+                    height: 100vh!important;
+                    background-color: #ccc;
+                    margin-left: -80vw;
+                    transition: margin-left 300ms linear;
+                    margin-top: 50px;
+                }
+
+                label{
+                    cursor: pointer;
+                    z-index: 800;
+                    font-size: 1.5rem!important;
+
+                    .arrow{
+                        display: none;
+                    }
+                }
+
+                input{
+                    display: none;
+
+                    &:checked{
+                        color: transparent;
+                        outline: none;
+
+                        & ~ div.links{
+                            // display: inline-block;
+                            margin-left: 0;
+                            left: 0!important;
+                            position: absolute;
+                            z-index: 500;
+                            transition: margin-left 300ms linear;
+                            width: 300px;
+                        }
+
+                        & ~ label{
+                            position: absolute;
+                            .arrow{
+                                display: inline;
+
+                            }
+                            .bars{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        background-color: darken($color, 5);
+                    }
+
+                    &::placeholder{
+                        color: transparent;
+                        outline: none;
+                    }
+                }
+
+            }
+
+            .name{
+                width: 70%;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+header{
+
+        height: 50px!important;
+        line-height: 50px!important;
+
+        .block{
+            width: 100vw!important;
+
+            .line{
+                width: 100vw!important;
+            }
+
+            .nav{
+                margin-right: 15px;
+                width: 10%;
+               
+                div.links{
+                    width: 70vw!important;
+                    height: 100vh!important;
+                    background-color: #ccc;
+                    margin-left: -80vw;
+                    transition: margin-left 300ms linear;
+                    margin-top: 50px;
+                }
+
+                label{
+                    cursor: pointer;
+                    z-index: 800;
+                    font-size: 1.5rem!important;
+
+                    .arrow{
+                        display: none;
+                    }
+                }
+
+                input{
+                    display: none;
+
+                    &:checked{
+                        color: transparent;
+                        outline: none;
+
+                        & ~ div.links{
+                            // display: inline-block;
+                            margin-left: 0;
+                            left: 0!important;
+                            position: absolute;
+                            z-index: 500;
+                            transition: margin-left 300ms linear;
+                            width: 300px;
+                        }
+
+                        & ~ label{
+                            position: absolute;
+                            .arrow{
+                                display: inline;
+
+                            }
+                            .bars{
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        background-color: darken($color, 5);
+                    }
+
+                    &::placeholder{
+                        color: transparent;
+                        outline: none;
+                    }
+                }
+
+            }
+
+            .name{
+                font-size: 1.2rem!important;
+                word-spacing: 2px!important;
+                width: 60%!important;
+                margin-left: 0!important;
+                position: relative;
+                margin: 0 auto;
+            }
+
+            .menu{
+                width: 10%!important;
+            }
+        }
+
+
+        .research{
+            display: inline-block;
+            
+            input{
+                height: 40px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background-image: url('../img/icon.svg')!important;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-size: 18px;
+                font-size: 1rem;
+            }
+
+            input.validate{
+                display: none;
+                transition: all 300ms linear;
+                margin: 0;
+            }
+
+            input.field{
+                padding-left: 10px;
+                width: 18px;
+                background-color: transparent;
+                background-position-x: right;
+                color: #efefef;
+                font-weight: lighter;
+                
+                transition: all 300ms linear;
+                
+                &:active, &:focus{
+                    width: 300px;
+                    background-color: darken($color, 10);
+                    background-image: none;
+                    border-radius: 3px 0 0 3px;
+                    cursor: text;
+                    
+                    transition: all 300ms linear;
+                    
+                    &~input.validate{
+                        display: inline-block;
+                        transition: all 300ms linear;
+                        background-color: darken($color, 10);
+                        width: 50px;
+                        background-position-x: center;
+                        margin: 0 0 0 -10px;
+                        border-radius: 0 3px 3px 0;
+                    }
+                }
+            }
+        }
+    }
