@@ -1,0 +1,12 @@
+{
+  "mongoDB": {
+    "host": "",
+    "port": 0,
+    "url": "${MONGO_URL}",
+    "database": "xlog",
+    "password": "",
+    "name": "mongoDB",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
