@@ -10,8 +10,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   strict: false,
   state: {
-    token: null,
-    user: null,
+    token: '',
+    user: '',
     isUserLoggedIn: false,
   },
   plugins: [
