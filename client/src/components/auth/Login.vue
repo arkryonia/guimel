@@ -51,8 +51,6 @@ export default {
         this.email = ''
         this.password = ''
         this.$router.push({ name: 'Home' })
-        // eslint-disable-next-line
-        alert(this.$store.state.token)
       } catch (error) {
         // eslint-disable-next-line
         console.log(error)
