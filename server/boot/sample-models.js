@@ -8,7 +8,6 @@ module.exports = function(app) {
   var User = app.loopback.User;
 
   User.create([{
-    username: 'Hodonou',
     email: 'hodonou@sounton.me',
     password: '4CDLrr000@Xlog'}], function(err, users) {
     if (err) throw err;
