@@ -1,5 +1,5 @@
 {
-  "name": "realization",
+  "name": "Realization",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

@@ -5,7 +5,7 @@
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 module.exports = function(app) {
-  var User = app.models.Account;
+  var User = app.loopback.User;
 
   User.create([{
     username: 'Hodonou',
