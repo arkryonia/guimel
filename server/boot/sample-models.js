@@ -9,8 +9,8 @@ module.exports = function(app) {
 
   User.create([{
     username: 'Hodonou',
-    email: 'sounton@gmail.com',
-    password: 'opensesame'}], function(err, users) {
+    email: 'hodonou@sounton.me',
+    password: '4CDLrr000@Xlog'}], function(err, users) {
     if (err) throw err;
 
     console.log('Created users:', users);
