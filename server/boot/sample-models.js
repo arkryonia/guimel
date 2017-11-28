@@ -5,12 +5,11 @@
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
 module.exports = function(app) {
-  var User = app.models.Account;
+  var User = app.loopback.User;
 
   User.create([{
-    username: 'Hodonou',
-    email: 'sounton@gmail.com',
-    password: 'opensesame'}], function(err, users) {
+    email: 'hodonou@sounton.me',
+    password: '4CDLrr000@Xlog'}], function(err, users) {
     if (err) throw err;
 
     console.log('Created users:', users);

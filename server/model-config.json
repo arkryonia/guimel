@@ -47,11 +47,7 @@
     "dataSource": "mongoDB",
     "public": true
   },
-  "realization": {
-    "dataSource": "mongoDB",
-    "public": true
-  },
-  "Account": {
+  "Realization": {
     "dataSource": "mongoDB",
     "public": true
   }
