@@ -8,7 +8,7 @@ module.exports = function(app) {
   var User = app.models.User;
 
   User.create([{
-    email: 'hodonou@sounton.me',
+    email: 'sounton@gmail.com',
     password: '4CDLrr000@Xlog'}], function(err, users) {
     if (err) throw err;
 

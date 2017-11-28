@@ -129,8 +129,8 @@ header div.deskHeader {
     header div.deskHeader .block .line {
       padding-right: 25px; }
     header div.deskHeader .block .name {
-      width: 25%;
-      font-size: 2rem;
+      width: 15%;
+      font-size: 1.3rem;
       font-weight: bold !important;
       word-spacing: 10px; }
       header div.deskHeader .block .name a {
@@ -142,7 +142,7 @@ header div.deskHeader {
           text-decoration: none; }
     header div.deskHeader .block .menu {
       text-align: right;
-      width: 70%; }
+      width: 80%; }
       header div.deskHeader .block .menu ul {
         padding: 0 !important;
         margin: 0 !important;
