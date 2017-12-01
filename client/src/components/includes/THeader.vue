@@ -37,10 +37,10 @@
             <ul>
               <router-link to="/"> <!-- icon name="home" scale="1.5"></icon --> Accueil </router-link>
               <router-link v-for="cat in cats" :to="{name:'PostByCat', params:{id: `${cat.id}` } }" :key="cat.name"> {{cat.name}} </router-link>            
-              <div class="research mlxl">
+              <!-- <div class="research mlxl">
                 <input type="search" name="" placeholder="" class="field">
                 <input type="submit" class="validate" value=" ">
-              </div>
+              </div> -->
             </ul>
           </div>
           

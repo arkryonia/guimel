@@ -8,9 +8,11 @@
               <ul>
                 <li>toutes les catégories</li>
                 <li v-for="cat in cats">
-                  {{cat.name}} -- {{cat.description}}
-                  <router-link :to="{name:'CategoryUpdate', params:{id: `${cat.id}` } }" class="moreButton" > Modifier </router-link>
-                  <button @click="removeCat(cat.id)" class="moreButton fr" > Supprimer </button>
+                  <strong>{{cat.name}}</strong>
+                  <div class="fr">
+                    <router-link :to="{name:'CategoryUpdate', params:{id: `${cat.id}` } }" class="update" > Modifier </router-link>
+                    <button @click="removeCat(cat.id)" class="" > Supprimer </button>
+                  </div>
                 </li>
               </ul>
             </div>
