@@ -64,6 +64,7 @@ p, i, span, div, button{
 
 	.md-1, .md-2, .md-3, .md-4, .md-5, .md-6, .md-7, .md-8, .md-9, .md-10, .md-11, .md-12{
 		display: inline-block!important;
+		vertical-align: top;
 	}
 
 	.md-1{
@@ -476,13 +477,15 @@ section.main{
 		}
 	}
 	.list.categories{
-		margin-right: 30px;
 		padding-right: 10px;
-		box-sizing: content-box;
 
 		li{
 			height: 50px!important;
 			line-height: 50px!important;
+			// &:first-of-type{
+			// 	background: none!important;
+			// 	color: #555;
+			// }
 		}
 		a.update{
 			background-color: darken(#00deab, 5);
@@ -518,6 +521,30 @@ section.main{
 			}
 		}
 	}
+
+	.aside{
+		ul{
+			padding: 0;
+			li{
+				list-style: none;
+				width: 80%;
+				border-bottom: 1px solid #ddd;
+				padding-left: 5px;
+				a{
+					height: 40px;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+
+	h2.backend-title{
+		margin-top: 0;
+	}
+
+	hr.backend-line{
+		margin-bottom: 30px;
+	}
 }
 
 footer{
@@ -537,37 +564,23 @@ footer{
 	div.social{
 		margin-bottom: 20px;
 		ul{
+			text-align: center;
 			padding-left: 0!important;
 		}
 		a{
 			text-decoration: none;
-			color: #fff;
 			margin-right: 20px;
+			&:last-of-type{
+				margin-right: 0!important;
+			}
 			img{
-				padding: 12px;
-				background-color: #bbb;
-				border-radius: 50%;
-			}
-		}
-		a.twitter{
-			&:hover{
-				img{
-					background-color: #1589E7;
-				}
-			}
-		}
-		a.facebook{
-			&:hover{
-				img{
-					background-color: #3b5998;
-				}
-			}
-		}
-		a.google{
-			margin-right: 0!important;
-			&:hover{
-				img{
-					background-color: darken(red, 3);
+				width: 50px!important;
+				filter: grayscale(100%);
+				transition: all 400ms linear;
+				&:hover{
+					filter: none;
+					transition: all 400ms linear;
+					transform: rotate(360deg);
 				}
 			}
 		}
@@ -603,7 +616,7 @@ footer{
 ////////////////////////////////////////////////////////////////////////////
 
 div.form-container{
-	margin-top: 60px;
+	// margin-top: 60px;
 	
 	label{
 		font-size: 1.2rem;
@@ -679,20 +692,20 @@ div.list{
 			padding-left: 10px;
 			width: 100%;
 
-			&:nth-child(2n+1){
+			&:nth-child(2n){
 				background-color: #efefef;
 			}
-			&:nth-child(2n){
+			&:nth-child(2n+1){
 				background-color: #f9f9f9;
 			}
 			&:hover{
 				background-color: #e2e2e2;
 			}
-			&:first-of-type{
-				background-color: #777!important;
-				color: #fff;
-				font-weight: bold;
-			}
+			// &:first-of-type{
+			// 	background-color: #777!important;
+			// 	color: #fff;
+			// 	font-weight: bold;
+			// }
 		}
 	}
 }
@@ -704,8 +717,17 @@ div.list{
 
 section.main{
 	div{
-		&.posts, &.cat_list{
+		&.posts{
 			float: left;
+			.item{
+				margin-bottom: 40px;
+				h3{
+				margin: 0px;
+				}
+				p{
+					margin-top: 10px;
+				}
+			}
 		}
 	}
 }

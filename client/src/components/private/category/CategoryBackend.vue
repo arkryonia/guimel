@@ -1,25 +1,19 @@
 <template>
   <div>
-    <section class="main">
-      <div class="block">
-        <div class="md-10 md-offset-1">
-          <div class="line">
-            <div class="list categories">
-              <ul>
-                <li>toutes les catégories</li>
-                <li v-for="cat in cats">
-                  <strong>{{cat.name}}</strong>
-                  <div class="fr">
-                    <router-link :to="{name:'CategoryUpdate', params:{id: `${cat.id}` } }" class="update" > Modifier </router-link>
-                    <button @click="removeCat(cat.id)" class="" > Supprimer </button>
-                  </div>
-                </li>
-              </ul>
-            </div>
+    <h2 class="backend-title">Toutes les catégories</h2>
+    <hr class="backend-line">
+    <div class="list categories">
+      <ul>
+        <!-- <li>toutes les catégories</li> -->
+        <li v-for="cat in cats">
+          <strong>{{cat.name}}</strong>
+          <div class="fr">
+            <router-link :to="{name:'CategoryUpdate', params:{id: `${cat.id}` } }" class="update" > Modifier </router-link>
+            <button @click="removeCat(cat.id)" class="" > Supprimer </button>
           </div>
-        </div>
-      </div>
-    </section>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
