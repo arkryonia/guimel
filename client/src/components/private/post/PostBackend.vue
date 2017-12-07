@@ -1,24 +1,17 @@
 <template>
   <div>
-    <section class="main">
-      <router-view></router-view>
-      <div class="block">
-        <div class="md-10 md-offset-1">
-          <div class="line">
-            <div class="posts">
-              <div v-for="post in posts">
-                <h3> {{post.title}} </h3>
-                <p>
-                  {{post.resume}}
-                </p>
-                <router-link :to="{name:'PostUpdate', params:{id: `${post.id}` } }" class="moreButton" > Modifier </router-link>
-                <button @click="removePost(post)" class="moreButton fr" > Supprimer </button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <h2 class="backend-title">All posts</h2>
+    <hr class="backend-line">
+    <div class="posts">
+      <div v-for="post in posts" class="item">
+        <h3> {{post.title}} </h3>
+        <p>
+          {{post.resume}}
+        </p>
+        <router-link :to="{name:'PostUpdate', params:{id: `${post.id}` } }" class="moreButton" > Modifier </router-link>
+        <button @click="removePost(post)" class="moreButton fr" > Supprimer </button>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 <script>

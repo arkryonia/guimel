@@ -1,23 +1,17 @@
 <template>
   <div>
-    <section class="main">
-      <div class="block">
-        <div class="md-10 md-offset-1">
-          <div class="line">
-            <div class="list categories">
-              <ul>
-                <li>tous les Projets</li>
-                <li v-for="p in projects" :key="p.id">
-                  {{p.name}} -- {{p.description}}
-                  <router-link :to="{name:'ProjectUpdate', params:{id: `${p.id}` } }" class="moreButton" > Modifier </router-link>
-                  <button @click="removeCat(p.id)" class="moreButton fr" > Supprimer </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <h2 class="backend-title">All projects</h2>
+    <hr class="backend-line">
+    <div class="posts">
+      <div v-for="p in projects" :key="p.id" class="item">
+        <h3> {{p.name}} </h3>
+        <p>
+          {{p.description}}
+        </p>
+        <router-link :to="{name:'ProjectUpdate', params:{id: `${p.id}` } }" class="moreButton" > Modifier </router-link>
+        <button @click="removeCat(p.id)" class="moreButton fr" > Supprimer </button>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 <script>

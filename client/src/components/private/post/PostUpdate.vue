@@ -1,25 +1,19 @@
 <template>
   <div>
     <!-- <t-section-title title='Update a Post'></t-section-title> -->
-    <section class="main">
-      <div class="block">
-        <div class="line">
-          <div class="md-8 md-offset-2">
-            <div class="form-container">
-              <label for="title">Title</label>
-              <input type="text" name="title" id="title" v-model="title">
-              <label for="tags">Tags</label>
-              <input type="text" name="tags" id="tags" v-model="tags">
-              <label for="resume">Résumé</label>
-              <textarea name="resume" id="resume" cols="30" rows="10" v-model="resume"></textarea>
-              <label for="content">Contenu</label>
-              <textarea name="content" id="content" cols="30" rows="10" v-model="content"></textarea>
-              <button type="submit" @click="update()">Modifier</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2 class="backend-title">Update post</h2>
+    <hr class="backend-line">
+    <div class="form-container">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" v-model="title">
+      <label for="tags">Tags</label>
+      <input type="text" name="tags" id="tags" v-model="tags">
+      <label for="resume">Résumé</label>
+      <textarea name="resume" id="resume" cols="30" rows="10" v-model="resume"></textarea>
+      <label for="content">Contenu</label>
+      <textarea name="content" id="content" cols="30" rows="10" v-model="content"></textarea>
+      <button type="submit" @click="update()">Modifier</button>
+    </div>
   </div>
 </template>
 <script>

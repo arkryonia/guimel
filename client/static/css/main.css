@@ -36,7 +36,8 @@ p, i, span, div, button {
     width: 98%;
     margin: 0 auto; }
   .block .md-1, .block .md-2, .block .md-3, .block .md-4, .block .md-5, .block .md-6, .block .md-7, .block .md-8, .block .md-9, .block .md-10, .block .md-11, .block .md-12 {
-    display: inline-block !important; }
+    display: inline-block !important;
+    vertical-align: top; }
   .block .md-1 {
     width: 8.1%; }
   .block .md-2 {
@@ -211,12 +212,15 @@ section#title {
       section#title.backend ul a {
         color: #fff;
         text-decoration: none;
-        padding: 7px 15px;
+        padding: 7px 10px;
+        box-sizing: border-box;
         background-color: #007e9e;
         border-radius: 3px;
         margin-right: 20px;
         font-size: 1rem;
-        transition: all 350ms linear; }
+        transition: all 350ms linear;
+        display: inline-block;
+        margin-bottom: 20px !important; }
       section#title.backend ul a:hover {
         background-color: #fff;
         color: #007e9e;
@@ -300,7 +304,50 @@ section.main {
       background-color: #008bad;
       transition: all 500ms ease; }
   section.main .list.categories {
-    margin-right: 45px; }
+    padding-right: 10px; }
+    section.main .list.categories li {
+      height: 50px !important;
+      line-height: 50px !important; }
+    section.main .list.categories a.update {
+      background-color: #00c597;
+      padding: 2px 10px;
+      border-radius: 3px;
+      margin-right: 15px;
+      color: #fff;
+      transition: all 200ms linear;
+      text-transform: lowercase; }
+      section.main .list.categories a.update:hover {
+        background-color: #00ab84;
+        transition: all 200ms linear; }
+    section.main .list.categories button {
+      border: none;
+      background-color: #f25252;
+      color: #fff;
+      padding: 2px 10px;
+      text-transform: lowercase;
+      font-size: 1rem;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+      transition: all 200ms linear;
+      margin-right: 10px; }
+      section.main .list.categories button:hover {
+        background-color: #f68181;
+        transition: all 200ms linear; }
+  section.main .aside ul {
+    padding: 0; }
+    section.main .aside ul li {
+      list-style: none;
+      width: 80%;
+      border-bottom: 1px solid #ddd;
+      padding-left: 5px; }
+      section.main .aside ul li a {
+        height: 40px;
+        line-height: 40px; }
+  section.main h2.backend-title {
+    margin-top: 0; }
+  section.main hr.backend-line {
+    margin-bottom: 30px; }
 
 footer {
   margin-top: 40px !important;
@@ -316,23 +363,21 @@ footer {
   footer div.social {
     margin-bottom: 20px; }
     footer div.social ul {
+      text-align: center;
       padding-left: 0 !important; }
     footer div.social a {
       text-decoration: none;
-      color: #fff;
       margin-right: 20px; }
+      footer div.social a:last-of-type {
+        margin-right: 0 !important; }
       footer div.social a img {
-        padding: 12px;
-        background-color: #bbb;
-        border-radius: 50%; }
-    footer div.social a.twitter:hover img {
-      background-color: #1589E7; }
-    footer div.social a.facebook:hover img {
-      background-color: #3b5998; }
-    footer div.social a.google {
-      margin-right: 0 !important; }
-      footer div.social a.google:hover img {
-        background-color: #f00000; }
+        width: 50px !important;
+        filter: grayscale(100%);
+        transition: all 400ms linear; }
+        footer div.social a img:hover {
+          filter: none;
+          transition: all 400ms linear;
+          transform: rotate(360deg); }
   footer div.links {
     margin: 25px 0; }
     footer div.links a {
@@ -351,55 +396,52 @@ footer {
     margin-top: 30px; }
 
 /*                            FORM  SCSS  CODE                            */
-div.form-container {
-  margin-top: 60px; }
-  div.form-container label {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 12px;
-    display: block; }
-    div.form-container label.check {
-      display: inline !important; }
-  div.form-container input {
-    border: 1px solid #ccc; }
-  div.form-container input, div.form-container select {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    margin-bottom: 30px;
-    font-size: 1rem;
-    padding-left: 5px;
-    color: #444;
-    background: none; }
-  div.form-container textarea {
-    width: 100%;
-    height: 200px;
-    padding: 10px 5px;
-    font-size: 1.1rem;
-    margin-bottom: 30px; }
-  div.form-container input, div.form-container select, div.form-container textarea {
-    outline: none;
-    border-radius: 5px; }
-    div.form-container input:focus, div.form-container select:focus, div.form-container textarea:focus {
-      box-shadow: 0 0 3px #999; }
-  div.form-container button {
-    height: 50px;
-    line-height: 50px;
-    padding: 0 40px;
-    font-size: 1rem;
-    cursor: pointer;
-    background: linear-gradient(#00a7d1, #00566b);
-    border: 1px solid #eee;
-    color: #fff;
-    border-radius: 6px;
+div.form-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  display: block; }
+  div.form-container label.check {
+    display: inline !important; }
+div.form-container input {
+  border: 1px solid #ccc; }
+div.form-container input, div.form-container select {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #444;
+  background: none; }
+div.form-container textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px 5px;
+  font-size: 1.1rem;
+  margin-bottom: 30px; }
+div.form-container input, div.form-container select, div.form-container textarea {
+  outline: none;
+  border-radius: 5px; }
+  div.form-container input:focus, div.form-container select:focus, div.form-container textarea:focus {
+    box-shadow: 0 0 3px #999; }
+div.form-container button {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(#00a7d1, #00566b);
+  border: 1px solid #eee;
+  color: #fff;
+  border-radius: 6px;
+  transition: 300ms ease-in-out; }
+  div.form-container button:hover {
+    background: linear-gradient(#00566b, #00a7d1);
     transition: 300ms ease-in-out; }
-    div.form-container button:hover {
-      background: linear-gradient(#00566b, #00a7d1);
-      transition: 300ms ease-in-out; }
 
 div.list ul {
-  padding: 0;
-  border: 1px solid #efefef; }
+  padding: 0; }
   div.list ul li {
     list-style: none;
     height: 40px;
@@ -407,17 +449,21 @@ div.list ul {
     color: #555;
     padding-left: 10px;
     width: 100%; }
-    div.list ul li:nth-child(2n+1) {
+    div.list ul li:nth-child(2n) {
       background-color: #efefef; }
+    div.list ul li:nth-child(2n+1) {
+      background-color: #f9f9f9; }
     div.list ul li:hover {
       background-color: #e2e2e2; }
-    div.list ul li:first-of-type {
-      background-color: #777 !important;
-      color: #fff;
-      font-weight: bold; }
 
 /*                           BACK END SASS CODE                           */
-section.main div.posts, section.main div.cat_list {
+section.main div.posts {
   float: left; }
+  section.main div.posts .item {
+    margin-bottom: 40px; }
+    section.main div.posts .item h3 {
+      margin: 0px; }
+    section.main div.posts .item p {
+      margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,21 +1,15 @@
 <template>
   <div>
     <!-- <t-section-title title='Add a Category'></t-section-title> -->
-    <section class="main">
-      <div class="block">
-        <div class="line">
-          <div class="md-8 md-offset-2">
-            <div class="form-container">
-              <label for="name">Nom</label>
-              <input type="text" name="name" id="name" v-model="name">
-              <label for="description">Description</label>
-              <textarea name="description" id="description" cols="30" rows="10" v-model="description"></textarea>
-              <button type="submit" @click="add()">Save</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2 class="backend-title">Ajouter un projet</h2>
+    <hr class="backend-line">
+    <div class="form-container">
+      <label for="name">Nom</label>
+      <input type="text" name="name" id="name" v-model="name">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" cols="30" rows="10" v-model="description"></textarea>
+      <button type="submit" @click="add()">Save</button>
+    </div>
   </div>
 </template>
 <script>

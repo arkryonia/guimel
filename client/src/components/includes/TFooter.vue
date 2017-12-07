@@ -13,9 +13,9 @@
 
 					<div class="social">
 						<ul>
-							<a href="#" class="pulse twitter"><img src="/static/img/twitter.svg" alt=""></a>
-							<a href="#" class="pulse facebook"><img src="/static/img/facebook.svg" alt=""></a>
-							<a href="#" class="pulse google"><img src="/static/img/google.svg" alt=""></a>
+							<a href="#"><img src="/static/img/twitter.svg" alt=""></a>
+							<a href="#"><img src="/static/img/github.svg" alt=""></a>
+							<a href="#"><img src="/static/img/linkedin.svg" alt=""></a>
 						</ul>
 					</div>
 					<span class="copy">Copyright © sounton.me 2017</span>
