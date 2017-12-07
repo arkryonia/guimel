@@ -40,8 +40,6 @@
           name: this.name,
           description: this.description,
         }
-        // eslint-disable-next-line
-        console.log(this.$store.state.token)
         const h = {
           Authorization: `${this.$store.state.token}`,
         }
