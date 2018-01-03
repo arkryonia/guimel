@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  api:
+    image: drxos/blog:1.0.0
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - backend
+    environment:
+      MONGO_URL: "mongodb://db/"
+    restart: always
+  db:
+    image: mongo
+    networks:
+      - backend
+    restart: always
+networks:
+  backend:
+volumes:
+  .:

@@ -50,5 +50,9 @@
   "Realization": {
     "dataSource": "mongoDB",
     "public": true
+  },
+  "Attachement": {
+    "dataSource": "storage",
+    "public": true
   }
 }

@@ -4,6 +4,7 @@
     <hr class="backend-line">
     <div class="posts">
       <div v-for="post in posts" class="item">
+      <img :src="donwnlod(post.picture)" alt="">
         <h3> {{post.title}} </h3>
         <p>
           {{post.resume}}
@@ -52,6 +53,12 @@
           // eslint-disable-next-line
           alert(error)
         }
+      },
+      donwnlod(file) {
+        if (process.env.NODE_ENV === 'production') {
+          return `http://localhost:3000/api/attachements/pictures/download/${file}`
+        }
+        return `http://localhost:3000/api/attachements/pictures/download/${file}`
       },
     },
   }
